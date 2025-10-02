@@ -83,4 +83,5 @@ async def on_message(message: bale.Message):
 
 
 if __name__ == "__main__":
+    logging.info("BOT started successfully ...")
     bot.run()
