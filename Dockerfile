@@ -18,4 +18,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-CMD ["python", "collagoo.py"]
+CMD ["sleep", "3600"]
+# CMD ["python", "collagoo.py"]
