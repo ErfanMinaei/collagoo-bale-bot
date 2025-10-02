@@ -1,9 +1,8 @@
-FROM python:3.14-rc-alpine3.21
+FROM python:3.14-rc-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Install system packages needed by Pillow
 RUN apt-get update && apt-get install -y \
     build-essential \
     libjpeg-dev \
@@ -18,5 +17,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# CMD ["sleep", "3600"]
 CMD ["python", "collagoo.py"]
